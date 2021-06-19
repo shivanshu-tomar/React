@@ -7,7 +7,7 @@ const {
   GET_POST_SUCCEEDED,
   GET_POST_FAILED,
 } = dashboardActionTypes;
-const initialState = {
+export const initialState = {
   posts: [],
   postsError: "",
   postsRequested: true,

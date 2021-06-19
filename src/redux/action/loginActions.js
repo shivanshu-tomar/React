@@ -1,4 +1,4 @@
-import loginActions from "../actionType/loginActionType";
+import loginActions from "redux/actionType/loginActionType";
 
 const {
   SETEMIAL,

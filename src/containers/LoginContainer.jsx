@@ -55,9 +55,11 @@ function LoginContainer() {
         });
       });
   };
-  if (state.userAuthSucceeded) history.push("/dashboard");
+  console.log(localStorage.getItem("user"));
+  if (localStorage.getItem("user")) history.push("/dashboard");
   return (
     <>
+      {state.userAuthFailed !== "" && state.userAuthFailed}
       {state.userAuthrequested ? (
         <div className="d-flex align-items-center justify-content-center ">
           <ClipLoader />

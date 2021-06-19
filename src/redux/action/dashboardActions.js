@@ -1,4 +1,4 @@
-import dashboardActionTypes from "../actionType/dashboardActionTypes";
+import dashboardActionTypes from "redux/actionType/dashboardActionTypes";
 const {
   GET_POSTS_REQUESTED,
   GET_POSTS_SUCCEEDED,

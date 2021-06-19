@@ -9,9 +9,13 @@ function* authUser(action) {
     console.log(action);
     const response = yield call(login, action.payload);
     console.log(response);
+    localStorage.setItem("user", JSON.stringify(response.data));
     yield put({ type: USER_AUTH_SUCCEEDED, payload: response.data });
   } catch (e) {
-    yield put({ type: USER_AUTH_FAILED, payload: e.message });
+    yield put({
+      type: USER_AUTH_FAILED,
+      payload: e.response.data._error_message,
+    });
   }
 }
 export default authUser;

@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-function NavbarComponent({ name }) {
+function NavbarComponent({ name, logoutHandler }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -20,12 +20,17 @@ function NavbarComponent({ name }) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Log out</NavLink>
+              <div onClick={logoutHandler}>
+                <NavLink href="/">Log out</NavLink>
+              </div>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+              <NavLink href="https://shivanshu-1811.web.app/">
+                Contact Developer
               </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/dashboard/userDetails">Info</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
