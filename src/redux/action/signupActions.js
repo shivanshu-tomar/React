@@ -12,6 +12,8 @@ const {
   SETCHECKBOXERRROR,
 
   USER_SIGNUP_REQUESTED,
+  USER_SIGNUP_SUCCEEDED,
+  USER_SIGNUP_FAILED,
 } = signupActionsType;
 
 export const changeEmail = (payload) => {
@@ -79,6 +81,18 @@ export const changeUserNameError = (payload) => {
 export const userSignupRequested = (payload) => {
   return {
     type: USER_SIGNUP_REQUESTED,
+    payload,
+  };
+};
+export const userSignupFailed = (payload) => {
+  return {
+    type: USER_SIGNUP_FAILED,
+    payload,
+  };
+};
+export const userSignupSucceeded = (payload) => {
+  return {
+    type: USER_SIGNUP_SUCCEEDED,
     payload,
   };
 };

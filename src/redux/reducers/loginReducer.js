@@ -9,7 +9,7 @@ const {
   USER_AUTH_REQUESTED,
   USER_AUTH_SUCCEEDED,
 } = loginActionType;
-const initialState = {
+export const initialState = {
   email: "",
   password: "",
   emailError: "",

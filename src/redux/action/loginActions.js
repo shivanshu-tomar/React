@@ -1,4 +1,4 @@
-import loginActions from "redux/actionType/loginActionType";
+import loginActionType from "redux/actionType/loginActionType";
 
 const {
   SETEMIAL,
@@ -9,7 +9,7 @@ const {
   USER_AUTH_FAILED,
   USER_AUTH_REQUESTED,
   USER_AUTH_SUCCEEDED,
-} = loginActions;
+} = loginActionType;
 export const authUser = (payload) => {
   return {
     type: USER_AUTH_REQUESTED,
